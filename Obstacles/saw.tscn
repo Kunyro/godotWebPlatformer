@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5t5g4rhotj0u"]
+
+[ext_resource type="PackedScene" uid="uid://cor2nx0so4l0a" path="res://Obstacles/realSaw.tscn" id="1_6k571"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_11wpf"]
+radius = 9.0
+
+[node name="Saw" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-54, -25)
+shape = SubResource("CircleShape2D_11wpf")
+
+[node name="Hitbox" parent="." instance=ExtResource("1_6k571")]

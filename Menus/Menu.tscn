@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://d20kdmp267qhf"]
+
+[ext_resource type="Texture2D" uid="uid://28oyfki3up6f" path="res://Art/Pixel Adventure 1/Free/Background/Purple.png" id="1_0lr86"]
+[ext_resource type="Script" path="res://Menus/Menu.gd" id="1_p37a6"]
+[ext_resource type="Texture2D" uid="uid://ca8qk0fwwokuq" path="res://Art/Pixel Adventure 1/Free/Menu/Buttons/Play.png" id="2_pssss"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b5lhq"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchor_left = -0.111
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.872
+offset_top = 40.0
+offset_right = -112.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p37a6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+anchor_left = -0.09
+anchor_top = -0.123
+offset_left = -312.32
+offset_top = -496.296
+offset_right = 712.0
+offset_bottom = 224.0
+texture = ExtResource("1_0lr86")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 8.0
+offset_top = -48.0
+offset_right = 224.0
+offset_bottom = 4.0
+text = "CS50 Platformer
+Johakim Fontaine Barboza"
+label_settings = SubResource("LabelSettings_b5lhq")
+horizontal_alignment = 1
+
+[node name="Play" type="TextureButton" parent="."]
+layout_mode = 2
+anchor_top = -0.062
+offset_left = 104.0
+offset_top = 48.176
+offset_right = 320.0
+offset_bottom = 188.0
+texture_normal = ExtResource("2_pssss")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(112, 0)
+zoom = Vector2(2, 2)
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
