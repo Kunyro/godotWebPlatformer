@@ -1,10 +1,11 @@
-# PLATFROMER50
+# godotWebPlatformer
 #### Play Game:
 https://kunyro.itch.io/platformer50
 #### Video Demo:
 https://www.youtube.com/watch?v=n35GtJ8CFII
 #### Description:
 A simple platformer game made using the Godot engine and playable on itch.io.
+Game was made as a final project for Harvard's CS50 course
 #### Features:
 - Basic movements using arrowkeys and spacebar
 - Variable jump height
